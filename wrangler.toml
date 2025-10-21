@@ -1,0 +1,11 @@
+name = "blog-frontend"
+compatibility_date = "2024-05-01"
+
+# 告诉 Cloudflare Worker 的入口
+main = ".vercel/output/static/_worker.js"
+
+[site]
+bucket = ".vercel/output/static"
+
+[build]
+command = "npm run build && npx @cloudflare/next-on-pages"

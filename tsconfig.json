@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    /* JS 输出目标 */
+    "target": "ES2020",
+    /* 支持的库环境 */
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    /* 模块系统 */
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    /* JSX 设置 —— 必须改为 react-jsx */
+    "jsx": "preserve",
+    /* 类型检查与编译优化 */
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    /* 自动导入 React 类型 */
+    "types": [
+      "react",
+      "react-dom"
+    ],
+    /* Next.js 插件支持 */
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    /* 路径别名（对应 src 目录） */
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  /* 包含的文件 */
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/types/**/*.d.ts",
+    "next.config.mjs"
+  ],
+  /* 排除目录 */
+  "exclude": [
+    "node_modules"
+  ]
+}
