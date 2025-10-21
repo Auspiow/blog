@@ -34,9 +34,6 @@ export function HeroSection() {
           transition={{ delay: 0.6 }}
           className="flex justify-center gap-4"
         >
-          <button className="px-8 py-3 bg-transparent border border-gray-300 hover:bg-white/10 rounded-lg text-lg font-semibold transition-all">
-            Learn More
-          </button>
         </motion.div>
       </div>
     </section>
