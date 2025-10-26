@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "deploy": "npm run pages:build && npx wrangler deploy"
+    "build": "next build && npx @cloudflare/next-on-pages",
+    "preview": "npx wrangler pages dev .vercel/output/static"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
