@@ -1,0 +1,71 @@
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FEFEFE;
+  border: 0.5px solid #606060;
+  border-radius: 0.25rem;
+  margin-bottom: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .card {
+  background-color: #000;
+  border: 0.5px solid #606060;
+}
+
+.card-header {
+  padding: 0.7rem 1.5rem 0.25rem 1.5rem;
+  margin-bottom: 0;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  background-color: #101010;
+  border-bottom: 0.5px solid #606060;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0.75rem 1rem;
+}
+
+.file-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5em;
+  transition: background-color 0.3s;
+  border-radius: 0.25rem;
+}
+
+.file-block:hover {
+  background-color: #eeeeee;
+}
+[data-md-color-scheme="slate"] .file-block:hover {
+  background-color: #202020;
+}
+
+.file-body {
+  flex: 1;
+}
+
+.file-title {
+  font-size: 1.05em;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+[data-md-color-scheme="slate"] .file-title {
+  color: #f5f5f5;
+}
