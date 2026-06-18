@@ -3,17 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 5dbwat4's Blog
+title: Auspiow's blog
 subtitle: ''
-description: 'Struggling to make it.'
+description: 'Personal blog of Auspiow.'
 keywords:
-author: 5dbwat4
+author: Auspiow
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.5dbwat4.top
+url: https://Auspiow.github.io/blog
+root: /blog/
 permalink: arch/:name.html
 permalink_defaults:
 pretty_urls:
@@ -107,6 +108,6 @@ theme: cactus-mod
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://github.com/5dbwat4/blog
+  repo: https://github.com/Auspiow/blog
   branch: 'main'
   message: "Site updated: {{ now('DD HH:mm:ss') }}"

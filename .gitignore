@@ -1,8 +1,19 @@
 .DS_Store
 Thumbs.db
+
+# Hexo generated files
 db.json
-*.log
-node_modules/
 public/
 .deploy*/
+
+# Dependencies and package-manager noise
+node_modules/
+*.log
+_tmp_*
+.cache/
+
+# Local-only config
 _multiconfig.yml
+.env
+.env.*
+!.env.example

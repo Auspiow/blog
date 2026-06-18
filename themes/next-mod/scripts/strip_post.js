@@ -1,6 +1,6 @@
 /**
  * Strip Post Helper
- * @author memset0 ; Modified by 5dbwat4 for better performance<me@5dbwat4.top>
+ * @author memset0
  * @website https://memset0.cn
  * @description Strip post content.
  * @example
