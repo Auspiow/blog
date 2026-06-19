@@ -1,11 +1,11 @@
 nav:
-  home: 首页
-  about: 关于
-  articles: 归档
+  home: Home
+  about: About
+  articles: Archives
   projects: 项目
-  tag: 标签
+  tag: Tags
   category: 分类
-  search: 搜索
+  search: Search
   
 icons:
   menu: 目录
