@@ -1,6 +1,7 @@
 ---
 title: "SJTU CTF 2026 Writeup - Invisible Notes"
 date: 2026-06-15
+tags: CTF-WriteUp
 ---
 
 # Invisible Notes
