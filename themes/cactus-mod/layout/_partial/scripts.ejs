@@ -22,21 +22,39 @@
   <% } %>
   <script type="text/javascript">
   $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
+    // Add a language label and a copy button to every server-rendered code block.
+    // Hexo emits the language as the second class of `figure.highlight`, for
+    // example: <figure class="highlight javascript">.
+    $("figure.highlight").each(function() {
+      var $block = $(this);
+      var language = ($block.attr('class') || '').split(/\s+/).filter(function(name) {
+        return name && name !== 'highlight';
+      })[0] || 'text';
+      var languageLabels = {
+        js: 'JavaScript', ts: 'TypeScript', py: 'Python', sh: 'Shell',
+        yml: 'YAML', md: 'Markdown', txt: 'Text', plaintext: 'Text',
+        html: 'HTML', xml: 'XML', c: 'C', cpp: 'C++', cs: 'C#'
+      };
+      var label = languageLabels[language] || language;
+      var toolbar = '<div class="code-block-toolbar">';
+      toolbar += '<span class="code-block-language" aria-hidden="true">' + $('<span>').text(label).html() + '</span>';
+      toolbar += '<button type="button" class="btn-copy tooltipped tooltipped-sw" aria-label="<%= __('tooltip.copy_tip') %>">';
+      toolbar += '<i class="fa-regular fa-clone" aria-hidden="true"></i>';
+      toolbar += '</button></div>';
+      $block.prepend(toolbar);
+    });
+
     var clip = new ClipboardJS('.btn-copy', {
       text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+        return $(trigger).closest('.highlight').find('td.code').map(function() {
+          return this.innerText;
+        }).get().join('\n');
       }
     });
     clip.on('success', function(e) {
       e.trigger.setAttribute('aria-label', "<%= __('tooltip.copied') %>");
       e.clearSelection();
-    })
+    });
   })
   </script>
 <% } %>

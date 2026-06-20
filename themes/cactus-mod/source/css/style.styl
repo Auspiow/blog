@@ -170,9 +170,10 @@ code
   -webkit-border-radius: 2px
 
 .highlight
+  position: relative
   overflow-x: auto
   margin: 1rem 0
-  padding: 10px 15px
+  padding: 2.4rem 15px 10px
   border-radius: 4px
   background: $color-background-code
   font-family: $font-family-mono
@@ -206,14 +207,43 @@ code
     .btn-copy
       opacity: 1
 
-  .btn-copy
-    font-size: 1.2rem
+  .code-block-toolbar
     position: absolute
-    right: 20px
+    top: 0
+    right: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: .45rem .7rem
+    border-bottom: 1px solid $color-border
+    color: $color-meta-code
+    font-size: .75rem
+    line-height: 1
+
+  .code-block-language
+    text-transform: uppercase
+    letter-spacing: .06em
+
+  .btn-copy
+    padding: 0
+    border: 0
+    background: transparent
+    color: inherit
+    font-size: 1rem
+    line-height: 1
+    cursor: pointer
     opacity: 0
     transition: opacity 0.2s ease-in
     &:hover
       color: $color-accent-1
+
+    &:focus
+      opacity: 1
+
+    &:focus-visible
+      outline: 1px solid $color-accent-1
+      outline-offset: 3px
 
   pre
     margin: 0

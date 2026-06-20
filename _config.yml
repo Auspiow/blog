@@ -53,7 +53,12 @@ highlight:
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: true
+  # Cactus highlight styles use Highlight.js token classes without the
+  # `hljs-` prefix, so keep this disabled for compatible syntax colours.
+  hljs: false
+# Use a fenced code block with its language, for example ```js, ```python,
+# ```c, ```cpp, ```bash, ```json, ```yaml, ```html, or ```sql.  Hexo passes
+# the language to Highlight.js and the theme displays it above the block.
 prismjs:
   enable: false
   preprocess: true
