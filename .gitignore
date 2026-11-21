@@ -17,3 +17,6 @@ _multiconfig.yml
 .env
 .env.*
 !.env.example
+
+scaffolds/**
+/sync-blog.cjs
